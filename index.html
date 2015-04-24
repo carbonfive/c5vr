@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Carbon Five VR Demos</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
     <meta name="og:type" content="website" />
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:title" content="Carbon Five VR Demos">
@@ -14,12 +13,30 @@
     <meta name="twitter:creator" content="@carbonfive">
     <meta name="twitter:description" content="A collection of VR demos made by us Carbon Fivers">
     <meta name="og:description" content="A collection of VR demos made by us Carbon Fivers">
-    <meta name="twitter:image:src" content="http://rudyjahchan.com/tronwebvr/images/TRONWebVR.gif" />
-    <meta name="og:image" content="http://rudyjahchan.com/tronwebvr/images/TRONWebVR.gif" />
+    <meta name="twitter:image:src" content="http://c5vr.com/images/tron_vr.gif" />
+    <meta name="og:image" content="http://c5vr.com/images/tron_vr.gif" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <style>
+html, body {
+  background-color: #042028;
+    color: white;
+}
+
+.header {
+  text-align: center;
+}
+
+.header img {
+  display:inline;
+}
+    </style>
   </head>
   <body>
     <div class="container">
-      <h1><a href="/">Carbon Five VR Demos</a></h1>
+      <div class="header">
+        <h1><a href="/">Carbon Five VR Demos</a></h1>
+        <img src="/images/tron_vr.gif" class="img-responsive">
+      </div>
       <p>
         Here are some examples of WebVR.  Make sure you have download a WebVR enabled browser such as
       <a href="http://mozvr.com/downloads/">Firefox Nightly</a> or
@@ -35,7 +52,7 @@
           <li><a href="basic_vr_mobile.html">VR with Mobile</a> - Adds support for mobile devices.</li>
           <li><a href="tron_vr.html">TRON VR</a> - Adds a more complex model and textured world.</li>
           <li><a href="leap_motion.html">Leap Motion Demo</a> - Allow your hands to enter the world.</li>
-          <li><a href="raycast_vr.html">Raycast VR</a> - An example of the most basic integration.</li>
+          <li><a href="raycast_vr.html">Raycast VR</a> - An example of the most basic interaction.</li>
         </ul>
       </p>
 
