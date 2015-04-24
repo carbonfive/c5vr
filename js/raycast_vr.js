@@ -111,6 +111,19 @@ function onKey(event) {
 };
 window.addEventListener('keydown', onKey, true);
 
+var lastClickTime;
+function onClick(event) {
+  event.stopPropagation();
+  event.preventDefault();
+
+  var clickTime = new Date();
+  if (clickTime - lastClickTime < 300) {
+    toggleVR();
+  }
+  lastClickTime = clickTime;
+}
+window.addEventListener('click', onClick, true);
+
 function onWindowResize() {
   camera.aspect = window.innerWidth / window.innerHeight;
   camera.updateProjectionMatrix();
