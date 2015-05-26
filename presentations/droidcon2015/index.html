@@ -1,0 +1,672 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Getting Started in VR for Android with Google Cardboard and Unity</title>
+
+		<meta name="description" content="A workshop presentation to introduce concepts and challenges.">
+		<meta name="author" content="Sueanna Yeh and Rudy Jahchan">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/carbonfive.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+        <section>
+          <section>
+            <h2>Willkommen</h2>
+          </section>
+          <section>
+            <div class="presenters">
+              <div class="presenter">
+                <img class="avatar" src="images/sueannayeh.jpeg" alt="Sue Anna Yeh" />
+                Sue Anna Yeh<br>
+                <a href="http://twitter.com/sueannayeh">@sueannayeh</a><br>
+                <a href="mailto:sueanna@carbonfive.com">sueanna@carbonfive.com</a>
+              </div>
+              <div class="presenter">
+                <img class="avatar" src="images/rudyjahchan.jpg" alt="Rudy Jahchan" />
+                Rudy Jahchan<br>
+                <a href="http://twitter.com/rudy">@rudy</a><br>
+                <a href="mailto:rudy@carbonfive.com">rudy@carbonfive.com</a>
+              </div>
+            </div>
+          </section>
+          <section>
+            <h1>Getting Started in VR</h1>
+          </section>
+          <section data-background="images/tron2.gif"></section>
+          <section data-background="images/lawnmowerman2.gif"></section>
+          <section data-background="images/johnny.jpg"></section>
+          <section data-background="#000000"></section>
+          <section data-background="images/kickstart.png"></section>
+          <section data-background="#ffffff">
+            <img alt="The Future is Meow" src="images/The-Future-Is-Meow.png" style="width: 100%;">
+          </section>
+          <section><h3>How do we get started?</h3></section>
+          <section data-background="#ffffff">
+            <a href="http://carbonfive.com"><img alt="Carbon Five" src="images/carbonfive.png"></a>
+          </section>
+          <section>
+            <h3>We're giving you a kit</h3>
+            <p>Includes the software (Windows and Mac), a Google Cardboard headset, the assets and code for the game, and a sticker.</p>
+          </section>
+          <section>
+            <h3>Resources</h3>
+            <ul>
+              <li><a href="http://unity3d.com">Unity3D</a></li>
+              <li><a href="https://developer.android.com/sdk/index.html">Android Studio</a></li>
+              <li><a href="https://developers.google.com/cardboard/">Google Cardboard Libraries</a></li>
+              <li><a href="http://c5vr.com">c5vr.com</a></li>
+            </ul>
+          </section>
+          <section data-background="images/matrix.jpg"></section>
+        </section>
+        <section>
+          <section data-background="images/headset.jpg">
+            <h2>Headsets</h2>
+          </section>
+          <section data-background="images/headsets.jpg">
+          </section>
+          <section>
+            <h3>Minimum Viable Headset</h3>
+          </section>
+          <section>
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1777.6 893" enable-background="new 0 0 1777.6 893" xml:space="preserve">
+<g id="Headset">
+	<path fill="#FFFFFF" d="M763.6,221.9v105.6h250V221.9H763.6z M832.1,315.3c-22.1,0-40.1-17.9-40.1-40.1c0-22.1,17.9-40.1,40.1-40.1
+		c22.1,0,40.1,17.9,40.1,40.1C872.2,297.3,854.2,315.3,832.1,315.3z M940.6,313.8c-22.1,0-40.1-17.9-40.1-40.1
+		c0-22.1,17.9-40.1,40.1-40.1c22.1,0,40.1,17.9,40.1,40.1C980.6,295.8,962.7,313.8,940.6,313.8z"/>
+</g>
+<g class="fragment" id="Step_1">
+	<g>
+		<path fill="#FFFFFF" d="M1157.2,11.4h-8.3l4-6.8h11.6v48.2h-7.3V11.4z"/>
+		<path fill="#FFFFFF" d="M1181.1,49.3c0-1.2,0.4-2.2,1.3-3c0.9-0.9,1.9-1.3,3.1-1.3s2.2,0.4,3.1,1.3c0.9,0.9,1.3,1.9,1.3,3.1
+			c0,1.2-0.4,2.2-1.3,3.1c-0.8,0.8-1.9,1.2-3.1,1.2c-1.2,0-2.3-0.4-3.1-1.2C1181.5,51.6,1181.1,50.5,1181.1,49.3z"/>
+		<path fill="#FFFFFF" d="M1241.9,0h7.1v52.8h-7.1v-3.2c-2.8,2.7-5.9,4.1-9.4,4.1c-4.2,0-7.6-1.5-10.4-4.6c-2.7-3.1-4.1-7-4.1-11.6
+			c0-4.5,1.4-8.3,4.1-11.4c2.7-3.1,6.1-4.6,10.2-4.6c3.6,0,6.8,1.5,9.6,4.4V0z M1225.2,37.5c0,2.9,0.8,5.3,2.3,7.1
+			c1.6,1.9,3.6,2.8,6.1,2.8c2.6,0,4.7-0.9,6.3-2.7c1.6-1.9,2.4-4.2,2.4-7.1c0-2.9-0.8-5.2-2.4-7.1c-1.6-1.8-3.7-2.7-6.2-2.7
+			c-2.4,0-4.4,0.9-6.1,2.8C1226,32.4,1225.2,34.7,1225.2,37.5z"/>
+		<path fill="#FFFFFF" d="M1285.6,39.2h-21.8c0.2,2.5,1,4.5,2.4,6c1.4,1.5,3.3,2.2,5.5,2.2c1.8,0,3.2-0.4,4.3-1.2
+			c1.1-0.8,2.4-2.4,3.8-4.6l5.9,3.3c-0.9,1.6-1.9,2.9-2.9,4c-1,1.1-2.1,2-3.3,2.8c-1.2,0.7-2.4,1.2-3.8,1.6
+			c-1.4,0.3-2.8,0.5-4.4,0.5c-4.5,0-8.2-1.5-10.9-4.4c-2.8-2.9-4.1-6.8-4.1-11.7c0-4.8,1.3-8.7,4-11.7c2.7-2.9,6.2-4.4,10.7-4.4
+			c4.5,0,8,1.4,10.6,4.3c2.6,2.8,3.9,6.8,3.9,11.8L1285.6,39.2z M1278.4,33.5c-1-3.8-3.3-5.6-7.1-5.6c-0.9,0-1.7,0.1-2.4,0.4
+			c-0.8,0.3-1.4,0.6-2,1.1c-0.6,0.5-1.1,1.1-1.6,1.8s-0.8,1.5-1,2.3H1278.4z"/>
+		<path fill="#FFFFFF" d="M1300.3,0v52.8h-7V0H1300.3z"/>
+		<path fill="#FFFFFF" d="M1308.2,9.7c0-1.2,0.4-2.3,1.3-3.2c0.9-0.9,2-1.3,3.2-1.3c1.3,0,2.4,0.4,3.2,1.3c0.9,0.9,1.3,1.9,1.3,3.2
+			c0,1.3-0.4,2.4-1.3,3.2c-0.9,0.9-1.9,1.3-3.2,1.3c-1.3,0-2.4-0.4-3.2-1.3C1308.6,12.1,1308.2,11,1308.2,9.7z M1316.2,22.3v30.4h-7
+			V22.3H1316.2z"/>
+		<path fill="#FFFFFF" d="M1328.9,22.3l7.9,17.1l7.8-17.1h7.9l-15.8,32.5l-15.7-32.5H1328.9z"/>
+		<path fill="#FFFFFF" d="M1383.9,39.2h-21.8c0.2,2.5,1,4.5,2.4,6c1.4,1.5,3.3,2.2,5.5,2.2c1.8,0,3.2-0.4,4.3-1.2
+			c1.1-0.8,2.4-2.4,3.8-4.6l5.9,3.3c-0.9,1.6-1.9,2.9-2.9,4c-1,1.1-2.1,2-3.3,2.8c-1.2,0.7-2.4,1.2-3.8,1.6
+			c-1.4,0.3-2.8,0.5-4.4,0.5c-4.5,0-8.2-1.5-10.9-4.4c-2.8-2.9-4.1-6.8-4.1-11.7c0-4.8,1.3-8.7,4-11.7c2.7-2.9,6.2-4.4,10.7-4.4
+			c4.5,0,8,1.4,10.6,4.3c2.6,2.8,3.9,6.8,3.9,11.8L1383.9,39.2z M1376.7,33.5c-1-3.8-3.3-5.6-7.1-5.6c-0.9,0-1.7,0.1-2.4,0.4
+			c-0.8,0.3-1.4,0.6-2,1.1c-0.6,0.5-1.1,1.1-1.6,1.8s-0.8,1.5-1,2.3H1376.7z"/>
+		<path fill="#FFFFFF" d="M1391.6,22.3h7v2.7c1.3-1.4,2.4-2.3,3.4-2.8c1-0.5,2.2-0.8,3.6-0.8c1.9,0,3.8,0.6,5.8,1.8l-3.2,6.4
+			c-1.3-1-2.6-1.4-3.9-1.4c-3.8,0-5.8,2.9-5.8,8.7v15.8h-7V22.3z"/>
+		<path fill="#FFFFFF" d="M1174.1,133.3h-7v-47h7v3.3c2.8-2.8,5.9-4.2,9.4-4.2c4.2,0,7.6,1.5,10.3,4.6c2.8,3.1,4.1,6.9,4.1,11.6
+			c0,4.6-1.4,8.4-4.1,11.4c-2.7,3-6.1,4.5-10.2,4.5c-3.6,0-6.8-1.4-9.6-4.3V133.3z M1190.8,101.8c0-2.9-0.8-5.3-2.4-7.1
+			c-1.6-1.9-3.6-2.8-6.1-2.8c-2.6,0-4.7,0.9-6.3,2.7c-1.6,1.8-2.4,4.1-2.4,7.1c0,2.9,0.8,5.2,2.4,7.1c1.6,1.8,3.7,2.7,6.2,2.7
+			c2.4,0,4.4-0.9,6-2.8C1190,106.8,1190.8,104.5,1190.8,101.8z"/>
+		<path fill="#FFFFFF" d="M1204,101.3c0-4.4,1.6-8.1,4.7-11.2c3.1-3.1,7-4.6,11.5-4.6c4.5,0,8.4,1.6,11.6,4.7
+			c3.1,3.1,4.7,6.9,4.7,11.4c0,4.6-1.6,8.4-4.7,11.5c-3.2,3.1-7.1,4.6-11.7,4.6c-4.6,0-8.4-1.6-11.5-4.7
+			C1205.5,109.9,1204,106,1204,101.3z M1211.2,101.5c0,3,0.8,5.4,2.4,7.2c1.7,1.8,3.9,2.7,6.6,2.7c2.8,0,4.9-0.9,6.6-2.7
+			c1.6-1.8,2.5-4.1,2.5-7.1c0-3-0.8-5.3-2.5-7.1c-1.7-1.8-3.9-2.7-6.6-2.7c-2.7,0-4.9,0.9-6.5,2.7
+			C1212,96.3,1211.2,98.6,1211.2,101.5z"/>
+		<path fill="#FFFFFF" d="M1261.6,91.5l-5.8,3.1c-0.9-1.9-2.1-2.8-3.4-2.8c-0.6,0-1.2,0.2-1.7,0.6c-0.5,0.4-0.7,1-0.7,1.6
+			c0,1.2,1.4,2.3,4.1,3.5c3.7,1.6,6.2,3.1,7.5,4.4c1.3,1.4,1.9,3.2,1.9,5.5c0,2.9-1.1,5.4-3.2,7.4c-2.1,1.9-4.6,2.8-7.6,2.8
+			c-5.1,0-8.7-2.5-10.8-7.5l6-2.8c0.8,1.5,1.5,2.4,1.9,2.8c0.9,0.8,1.9,1.2,3.1,1.2c2.4,0,3.6-1.1,3.6-3.2c0-1.2-0.9-2.4-2.8-3.5
+			c-0.7-0.4-1.4-0.7-2.1-1c-0.7-0.3-1.4-0.7-2.2-1c-2-1-3.5-2-4.3-3c-1.1-1.3-1.6-2.9-1.6-4.9c0-2.6,0.9-4.8,2.7-6.6
+			c1.9-1.7,4.1-2.6,6.8-2.6C1256.8,85.5,1259.7,87.5,1261.6,91.5z"/>
+		<path fill="#FFFFFF" d="M1268.8,73.7c0-1.2,0.4-2.3,1.3-3.2c0.9-0.9,2-1.3,3.2-1.3c1.3,0,2.4,0.4,3.2,1.3c0.9,0.9,1.3,1.9,1.3,3.2
+			c0,1.3-0.4,2.4-1.3,3.2c-0.9,0.9-1.9,1.3-3.2,1.3c-1.3,0-2.4-0.4-3.2-1.3C1269.2,76.1,1268.8,75,1268.8,73.7z M1276.9,86.3v30.4
+			h-7V86.3H1276.9z"/>
+		<path fill="#FFFFFF" d="M1293,92.9v23.9h-7V92.9h-3v-6.6h3V75.2h7v11.2h5.5v6.6H1293z"/>
+		<path fill="#FFFFFF" d="M1302.2,73.7c0-1.2,0.4-2.3,1.3-3.2c0.9-0.9,2-1.3,3.2-1.3c1.3,0,2.4,0.4,3.2,1.3c0.9,0.9,1.3,1.9,1.3,3.2
+			c0,1.3-0.4,2.4-1.3,3.2c-0.9,0.9-1.9,1.3-3.2,1.3c-1.3,0-2.4-0.4-3.2-1.3C1302.7,76.1,1302.2,75,1302.2,73.7z M1310.3,86.3v30.4
+			h-7V86.3H1310.3z"/>
+		<path fill="#FFFFFF" d="M1317.8,101.3c0-4.4,1.6-8.1,4.7-11.2c3.1-3.1,7-4.6,11.5-4.6c4.5,0,8.4,1.6,11.6,4.7
+			c3.1,3.1,4.7,6.9,4.7,11.4c0,4.6-1.6,8.4-4.7,11.5c-3.2,3.1-7.1,4.6-11.7,4.6c-4.6,0-8.4-1.6-11.5-4.7
+			C1319.3,109.9,1317.8,106,1317.8,101.3z M1325,101.5c0,3,0.8,5.4,2.4,7.2c1.7,1.8,3.9,2.7,6.6,2.7c2.8,0,4.9-0.9,6.6-2.7
+			c1.6-1.8,2.5-4.1,2.5-7.1c0-3-0.8-5.3-2.5-7.1c-1.7-1.8-3.9-2.7-6.6-2.7c-2.7,0-4.9,0.9-6.5,2.7C1325.8,96.3,1325,98.6,1325,101.5
+			z"/>
+		<path fill="#FFFFFF" d="M1357.7,86.3h7.1v2.8c2.5-2.4,5.2-3.7,8.3-3.7c3.5,0,6.3,1.1,8.3,3.3c1.7,1.9,2.6,5,2.6,9.3v18.7h-7.1v-17
+			c0-3-0.4-5.1-1.2-6.2c-0.8-1.2-2.3-1.7-4.4-1.7c-2.3,0-4,0.8-5,2.3c-1,1.5-1.4,4.2-1.4,8v14.7h-7.1V86.3z"/>
+		<path fill="#FFFFFF" d="M1197.7,128h7.1v52.8h-7.1v-3.2c-2.8,2.7-5.9,4.1-9.4,4.1c-4.2,0-7.6-1.5-10.4-4.6
+			c-2.7-3.1-4.1-7-4.1-11.6c0-4.5,1.4-8.3,4.1-11.4c2.7-3.1,6.1-4.6,10.2-4.6c3.6,0,6.8,1.5,9.6,4.4V128z M1181,165.5
+			c0,2.9,0.8,5.3,2.3,7.1c1.6,1.9,3.6,2.8,6.1,2.8c2.6,0,4.7-0.9,6.3-2.7c1.6-1.9,2.4-4.2,2.4-7.1c0-2.9-0.8-5.2-2.4-7.1
+			c-1.6-1.8-3.7-2.7-6.2-2.7c-2.4,0-4.4,0.9-6.1,2.8C1181.8,160.4,1181,162.7,1181,165.5z"/>
+		<path fill="#FFFFFF" d="M1236.1,150.3h7.1v30.4h-7.1v-3.2c-2.9,2.7-6,4.1-9.3,4.1c-4.2,0-7.7-1.5-10.4-4.6
+			c-2.7-3.1-4.1-7-4.1-11.6c0-4.6,1.4-8.4,4.1-11.4c2.7-3,6.1-4.6,10.2-4.6c3.5,0,6.7,1.5,9.5,4.4V150.3z M1219.4,165.5
+			c0,2.9,0.8,5.3,2.3,7.1c1.6,1.9,3.6,2.8,6.1,2.8c2.6,0,4.7-0.9,6.3-2.7c1.6-1.9,2.4-4.2,2.4-7.1c0-2.9-0.8-5.2-2.4-7.1
+			c-1.6-1.8-3.7-2.7-6.2-2.7c-2.4,0-4.4,0.9-6.1,2.8C1220.2,160.4,1219.4,162.7,1219.4,165.5z"/>
+		<path fill="#FFFFFF" d="M1259.2,156.9v23.9h-7v-23.9h-3v-6.6h3v-11.2h7v11.2h5.5v6.6H1259.2z"/>
+		<path fill="#FFFFFF" d="M1292.5,150.3h7.1v30.4h-7.1v-3.2c-2.9,2.7-6,4.1-9.3,4.1c-4.2,0-7.7-1.5-10.4-4.6
+			c-2.7-3.1-4.1-7-4.1-11.6c0-4.6,1.4-8.4,4.1-11.4c2.7-3,6.1-4.6,10.2-4.6c3.5,0,6.7,1.5,9.5,4.4V150.3z M1275.8,165.5
+			c0,2.9,0.8,5.3,2.3,7.1c1.6,1.9,3.6,2.8,6.1,2.8c2.6,0,4.7-0.9,6.3-2.7c1.6-1.9,2.4-4.2,2.4-7.1c0-2.9-0.8-5.2-2.4-7.1
+			c-1.6-1.8-3.7-2.7-6.2-2.7c-2.4,0-4.4,0.9-6.1,2.8C1276.6,160.4,1275.8,162.7,1275.8,165.5z"/>
+		<path fill="#FFFFFF" d="M1335.4,156.9v23.9h-7v-23.9h-3v-6.6h3v-11.2h7v11.2h5.5v6.6H1335.4z"/>
+		<path fill="#FFFFFF" d="M1344.7,165.3c0-4.4,1.6-8.1,4.7-11.2c3.1-3.1,7-4.6,11.5-4.6c4.5,0,8.4,1.6,11.6,4.7
+			c3.1,3.1,4.7,6.9,4.7,11.4c0,4.6-1.6,8.4-4.7,11.5c-3.2,3.1-7.1,4.6-11.7,4.6c-4.6,0-8.4-1.6-11.5-4.7
+			C1346.2,173.9,1344.7,170,1344.7,165.3z M1351.9,165.5c0,3,0.8,5.4,2.4,7.2c1.7,1.8,3.9,2.7,6.6,2.7c2.8,0,4.9-0.9,6.6-2.7
+			c1.6-1.8,2.5-4.1,2.5-7.1c0-3-0.8-5.3-2.5-7.1c-1.7-1.8-3.9-2.7-6.6-2.7c-2.7,0-4.9,0.9-6.5,2.7
+			C1352.7,160.3,1351.9,162.6,1351.9,165.5z"/>
+	</g>
+	<line fill="none" stroke="#FFFFFF" stroke-width="10" stroke-miterlimit="10" x1="1045.7" y1="274.7" x2="1403.8" y2="274.7"/>
+	<g>
+		<polygon fill="#FFFFFF" points="1403.8,242.7 1471.3,274.7 1403.8,306.7 		"/>
+	</g>
+</g>
+<g class="fragment" id="App">
+	<g>
+		<path fill="#FFFFFF" d="M1593.7,244.1c-3.8,0-6.9,1.4-9.5,4.3c-2.5,2.9-3.8,6.5-3.8,10.7c0,4.6,1.2,8.3,3.7,11.1
+			c2.5,2.9,5.7,4.3,9.5,4.3c4.1,0,7.4-1.4,9.9-4.2c2.5-2.9,3.8-6.6,3.8-11c0-4.5-1.3-8.1-3.8-11
+			C1600.9,245.6,1597.7,244.1,1593.7,244.1z"/>
+		<path fill="#FFFFFF" d="M1655.4,244.1c-4,0-7.3,1.4-9.8,4.2c-2.5,2.8-3.8,6.5-3.8,11c0,4.5,1.3,8.1,3.8,11
+			c2.5,2.8,5.7,4.2,9.8,4.2c3.8,0,6.9-1.4,9.4-4.3c2.5-2.9,3.8-6.4,3.8-10.7c0-4.6-1.2-8.3-3.7-11.1
+			C1662.3,245.6,1659.2,244.1,1655.4,244.1z"/>
+		<path fill="#FFFFFF" d="M1492.9,134.9v279.6h279.6V134.9H1492.9z M1553.9,282.5c-1.3,1.3-2.9,2-4.8,2c-1.9,0-3.5-0.7-4.8-2
+			c-1.3-1.3-2-2.9-2-4.9c0-1.8,0.7-3.4,2-4.7c1.3-1.3,2.9-2,4.8-2s3.5,0.7,4.8,2c1.3,1.3,2,2.9,2,4.8
+			C1555.9,279.6,1555.2,281.2,1553.9,282.5z M1617.6,283.1h-11v-5c-4.5,4.2-9.4,6.3-14.6,6.3c-6.6,0-12-2.4-16.3-7.1
+			c-4.3-4.9-6.4-10.9-6.4-18.2c0-7.1,2.1-13.1,6.4-17.8c4.3-4.8,9.6-7.1,16-7.1c5.5,0,10.5,2.3,14.9,6.8v-5.5h11V283.1z
+			 M1673.4,277.4c-4.2,4.7-9.6,7.1-16,7.1c-5.6,0-10.5-2.2-14.9-6.7V309h-11v-73.4h11v5.2c4.3-4.3,9.2-6.5,14.7-6.5
+			c6.5,0,11.9,2.4,16.2,7.2c4.3,4.8,6.4,10.8,6.4,18.1C1679.8,266.7,1677.6,272.6,1673.4,277.4z M1719.9,283.1l-15.7-20.1l-1.8,1.8
+			v18.3h-11v-82.5h11v50.3l15.5-15.4h14.7l-20.7,20l22.2,27.6H1719.9z"/>
+	</g>
+</g>
+<g class="fragment" id="Stereo">
+	<path fill="none" stroke="#FFFFFF" stroke-width="10" stroke-miterlimit="10" d="M1556.9,608.3h151.6c35.2,0,64,28.8,64,64V824
+		c0,35.2-28.8,64-64,64h-151.6c-35.2,0-64-28.8-64-64V672.3C1492.9,637.1,1521.7,608.3,1556.9,608.3z"/>
+	<ellipse fill="none" stroke="#FFFFFF" stroke-width="8" stroke-miterlimit="10" cx="1558.2" cy="668.8" rx="22.2" ry="33.3"/>
+	<line fill="none" stroke="#FFFFFF" stroke-width="8" stroke-miterlimit="10" x1="1492.9" y1="780.6" x2="1772.6" y2="780.6"/>
+	<rect x="1580.5" y="712" fill="#FFFFFF" width="61.1" height="92.6"/>
+	<path fill="none" stroke="#FFFFFF" stroke-width="10" stroke-miterlimit="10" d="M1221.9,608.3h151.6c35.2,0,64,28.8,64,64V824
+		c0,35.2-28.8,64-64,64h-151.6c-35.2,0-64-28.8-64-64V672.3C1157.9,637.1,1186.7,608.3,1221.9,608.3z"/>
+	<ellipse fill="none" stroke="#FFFFFF" stroke-width="8" stroke-miterlimit="10" cx="1275.5" cy="668.8" rx="22.2" ry="33.3"/>
+	<line fill="none" stroke="#FFFFFF" stroke-width="8" stroke-miterlimit="10" x1="1157.9" y1="780.6" x2="1437.5" y2="780.6"/>
+	<rect x="1297.7" y="712" fill="#FFFFFF" width="61.1" height="92.6"/>
+	<g>
+		<path fill="#FFFFFF" d="M1461.6,508.2l-13.7-24.8h8.2l9.3,17.5l8.7-17.5h7.9l-24.2,47h-8L1461.6,508.2z"/>
+		<path fill="#FFFFFF" d="M1484.2,498.5c0-4.4,1.6-8.1,4.7-11.2c3.1-3.1,7-4.6,11.5-4.6c4.5,0,8.4,1.6,11.6,4.7
+			c3.1,3.1,4.7,6.9,4.7,11.4c0,4.6-1.6,8.4-4.7,11.5c-3.2,3.1-7.1,4.6-11.7,4.6c-4.6,0-8.4-1.6-11.5-4.7
+			C1485.7,507,1484.2,503.1,1484.2,498.5z M1491.3,498.6c0,3,0.8,5.4,2.4,7.2c1.7,1.8,3.9,2.7,6.6,2.7c2.8,0,4.9-0.9,6.6-2.7
+			c1.6-1.8,2.5-4.1,2.5-7.1c0-3-0.8-5.3-2.5-7.1c-1.7-1.8-3.9-2.7-6.6-2.7c-2.7,0-4.9,0.9-6.5,2.7
+			C1492.2,493.4,1491.3,495.7,1491.3,498.6z"/>
+		<path fill="#FFFFFF" d="M1531.1,483.5v17.5c0,5,2,7.6,6,7.6c4,0,6-2.5,6-7.6v-17.5h7v17.6c0,2.4-0.3,4.5-0.9,6.3
+			c-0.6,1.6-1.6,3-3,4.3c-2.4,2.1-5.4,3.1-9.1,3.1c-3.6,0-6.7-1-9-3.1c-1.5-1.3-2.5-2.7-3.1-4.3c-0.6-1.4-0.9-3.5-0.9-6.3v-17.6
+			H1531.1z"/>
+		<path fill="#FFFFFF" d="M1558.9,483.5h7v2.7c1.3-1.4,2.4-2.3,3.4-2.8c1-0.5,2.2-0.8,3.6-0.8c1.9,0,3.8,0.6,5.8,1.8l-3.2,6.4
+			c-1.3-1-2.6-1.4-3.9-1.4c-3.8,0-5.8,2.9-5.8,8.7v15.8h-7V483.5z"/>
+		<path fill="#FFFFFF" d="M1625.1,483.5h7.1v30.4h-7.1v-3.2c-2.9,2.7-6,4.1-9.3,4.1c-4.2,0-7.7-1.5-10.4-4.6
+			c-2.7-3.1-4.1-7-4.1-11.6c0-4.6,1.4-8.4,4.1-11.4c2.7-3,6.1-4.6,10.2-4.6c3.5,0,6.7,1.5,9.5,4.4V483.5z M1608.4,498.6
+			c0,2.9,0.8,5.3,2.3,7.1c1.6,1.9,3.6,2.8,6.1,2.8c2.6,0,4.7-0.9,6.3-2.7c1.6-1.9,2.4-4.2,2.4-7.1c0-2.9-0.8-5.2-2.4-7.1
+			c-1.6-1.8-3.7-2.7-6.2-2.7c-2.4,0-4.4,0.9-6.1,2.8C1609.2,493.6,1608.4,495.9,1608.4,498.6z"/>
+		<path fill="#FFFFFF" d="M1648,530.5h-7v-47h7v3.3c2.8-2.8,5.9-4.2,9.4-4.2c4.2,0,7.6,1.5,10.3,4.6c2.8,3.1,4.1,6.9,4.1,11.6
+			c0,4.6-1.4,8.4-4.1,11.4c-2.7,3-6.1,4.5-10.2,4.5c-3.6,0-6.8-1.4-9.6-4.3V530.5z M1664.7,498.9c0-2.9-0.8-5.3-2.4-7.1
+			c-1.6-1.9-3.6-2.8-6.1-2.8c-2.6,0-4.7,0.9-6.3,2.7c-1.6,1.8-2.4,4.1-2.4,7.1c0,2.9,0.8,5.2,2.4,7.1c1.6,1.8,3.7,2.7,6.2,2.7
+			c2.4,0,4.4-0.9,6-2.8C1663.9,503.9,1664.7,501.6,1664.7,498.9z"/>
+		<path fill="#FFFFFF" d="M1686.4,530.5h-7v-47h7v3.3c2.8-2.8,5.9-4.2,9.4-4.2c4.2,0,7.6,1.5,10.3,4.6c2.8,3.1,4.1,6.9,4.1,11.6
+			c0,4.6-1.4,8.4-4.1,11.4c-2.7,3-6.1,4.5-10.2,4.5c-3.6,0-6.8-1.4-9.6-4.3V530.5z M1703.1,498.9c0-2.9-0.8-5.3-2.4-7.1
+			c-1.6-1.9-3.6-2.8-6.1-2.8c-2.6,0-4.7,0.9-6.3,2.7c-1.6,1.8-2.4,4.1-2.4,7.1c0,2.9,0.8,5.2,2.4,7.1c1.6,1.8,3.7,2.7,6.2,2.7
+			c2.4,0,4.4-0.9,6-2.8C1702.3,503.9,1703.1,501.6,1703.1,498.9z"/>
+		<path fill="#FFFFFF" d="M1476,547.5h7v2.7c1.3-1.4,2.4-2.3,3.4-2.8c1-0.5,2.2-0.8,3.6-0.8c1.9,0,3.8,0.6,5.8,1.8l-3.2,6.4
+			c-1.3-1-2.6-1.4-3.9-1.4c-3.8,0-5.8,2.9-5.8,8.7v15.8h-7V547.5z"/>
+		<path fill="#FFFFFF" d="M1527.3,564.3h-21.8c0.2,2.5,1,4.5,2.4,6c1.4,1.5,3.3,2.2,5.5,2.2c1.8,0,3.2-0.4,4.3-1.2
+			c1.1-0.8,2.4-2.4,3.8-4.6l5.9,3.3c-0.9,1.6-1.9,2.9-2.9,4c-1,1.1-2.1,2-3.3,2.8c-1.2,0.7-2.4,1.2-3.8,1.6
+			c-1.4,0.3-2.8,0.5-4.4,0.5c-4.5,0-8.2-1.5-10.9-4.4c-2.8-2.9-4.1-6.8-4.1-11.7c0-4.8,1.3-8.7,4-11.7c2.7-2.9,6.2-4.4,10.7-4.4
+			c4.5,0,8,1.4,10.6,4.3c2.6,2.8,3.9,6.8,3.9,11.8L1527.3,564.3z M1520,558.6c-1-3.8-3.3-5.6-7.1-5.6c-0.9,0-1.7,0.1-2.4,0.4
+			c-0.8,0.3-1.4,0.6-2,1.1c-0.6,0.5-1.1,1.1-1.6,1.8s-0.8,1.5-1,2.3H1520z"/>
+		<path fill="#FFFFFF" d="M1535,547.5h7.1v2.8c2.5-2.4,5.2-3.7,8.3-3.7c3.5,0,6.3,1.1,8.3,3.3c1.7,1.9,2.6,5,2.6,9.3v18.7h-7.1v-17
+			c0-3-0.4-5.1-1.2-6.2c-0.8-1.2-2.3-1.7-4.4-1.7c-2.3,0-4,0.8-5,2.3c-1,1.5-1.4,4.2-1.4,8v14.7h-7.1V547.5z"/>
+		<path fill="#FFFFFF" d="M1592.5,525.1h7.1v52.8h-7.1v-3.2c-2.8,2.7-5.9,4.1-9.4,4.1c-4.2,0-7.6-1.5-10.4-4.6
+			c-2.7-3.1-4.1-7-4.1-11.6c0-4.5,1.4-8.3,4.1-11.4c2.7-3.1,6.1-4.6,10.2-4.6c3.6,0,6.8,1.5,9.6,4.4V525.1z M1575.8,562.6
+			c0,2.9,0.8,5.3,2.3,7.1c1.6,1.9,3.6,2.8,6.1,2.8c2.6,0,4.7-0.9,6.3-2.7c1.6-1.9,2.4-4.2,2.4-7.1c0-2.9-0.8-5.2-2.4-7.1
+			c-1.6-1.8-3.7-2.7-6.2-2.7c-2.4,0-4.4,0.9-6.1,2.8C1576.6,557.6,1575.8,559.9,1575.8,562.6z"/>
+		<path fill="#FFFFFF" d="M1636.1,564.3h-21.8c0.2,2.5,1,4.5,2.4,6c1.4,1.5,3.3,2.2,5.5,2.2c1.8,0,3.2-0.4,4.3-1.2
+			c1.1-0.8,2.4-2.4,3.8-4.6l5.9,3.3c-0.9,1.6-1.9,2.9-2.9,4c-1,1.1-2.1,2-3.3,2.8c-1.2,0.7-2.4,1.2-3.8,1.6
+			c-1.4,0.3-2.8,0.5-4.4,0.5c-4.5,0-8.2-1.5-10.9-4.4c-2.8-2.9-4.1-6.8-4.1-11.7c0-4.8,1.3-8.7,4-11.7c2.7-2.9,6.2-4.4,10.7-4.4
+			c4.5,0,8,1.4,10.6,4.3c2.6,2.8,3.9,6.8,3.9,11.8L1636.1,564.3z M1628.9,558.6c-1-3.8-3.3-5.6-7.1-5.6c-0.9,0-1.7,0.1-2.4,0.4
+			c-0.8,0.3-1.4,0.6-2,1.1c-0.6,0.5-1.1,1.1-1.6,1.8s-0.8,1.5-1,2.3H1628.9z"/>
+		<path fill="#FFFFFF" d="M1643.8,547.5h7v2.7c1.3-1.4,2.4-2.3,3.4-2.8c1-0.5,2.2-0.8,3.6-0.8c1.9,0,3.8,0.6,5.8,1.8l-3.2,6.4
+			c-1.3-1-2.6-1.4-3.9-1.4c-3.8,0-5.8,2.9-5.8,8.7v15.8h-7V547.5z"/>
+		<path fill="#FFFFFF" d="M1685.5,552.6l-5.8,3.1c-0.9-1.9-2.1-2.8-3.4-2.8c-0.6,0-1.2,0.2-1.7,0.6c-0.5,0.4-0.7,1-0.7,1.6
+			c0,1.2,1.4,2.3,4.1,3.5c3.7,1.6,6.2,3.1,7.5,4.4c1.3,1.4,1.9,3.2,1.9,5.5c0,2.9-1.1,5.4-3.2,7.4c-2.1,1.9-4.6,2.8-7.6,2.8
+			c-5.1,0-8.7-2.5-10.8-7.5l6-2.8c0.8,1.5,1.5,2.4,1.9,2.8c0.9,0.8,1.9,1.2,3.1,1.2c2.4,0,3.6-1.1,3.6-3.2c0-1.2-0.9-2.4-2.8-3.5
+			c-0.7-0.4-1.4-0.7-2.1-1c-0.7-0.3-1.4-0.7-2.2-1c-2-1-3.5-2-4.3-3c-1.1-1.3-1.6-2.9-1.6-4.9c0-2.6,0.9-4.8,2.7-6.6
+			c1.9-1.7,4.1-2.6,6.8-2.6C1680.7,546.6,1683.6,548.6,1685.5,552.6z"/>
+	</g>
+</g>
+<g class="fragment" id="Step_2">
+	<g>
+		<path fill="#FFFFFF" d="M562.5,695.3h18v6.8H548l16.8-20.3c1.6-2,3-3.8,4.1-5.2c1.1-1.5,2-2.7,2.5-3.7c1.2-2,1.8-3.7,1.8-5.3
+			c0-2.2-0.8-4.1-2.4-5.7c-1.6-1.5-3.5-2.3-5.9-2.3c-4.9,0-7.7,2.9-8.4,8.7h-7.2c1.2-10.2,6.3-15.2,15.4-15.2
+			c4.4,0,8.1,1.4,11.1,4.2c3,2.8,4.5,6.2,4.5,10.4c0,2.6-0.7,5.2-2.1,7.7c-0.7,1.3-1.7,2.9-3.1,4.7c-1.4,1.8-3.1,3.9-5.2,6.4
+			L562.5,695.3z"/>
+		<path fill="#FFFFFF" d="M591.5,698.6c0-1.2,0.4-2.2,1.3-3c0.9-0.9,1.9-1.3,3.1-1.3s2.2,0.4,3.1,1.3c0.9,0.9,1.3,1.9,1.3,3.1
+			c0,1.2-0.4,2.2-1.3,3.1c-0.8,0.8-1.9,1.2-3.1,1.2c-1.2,0-2.3-0.4-3.1-1.2C591.9,700.9,591.5,699.9,591.5,698.6z"/>
+		<path fill="#FFFFFF" d="M647.5,676.9l-5.8,3.1c-0.9-1.9-2.1-2.8-3.4-2.8c-0.6,0-1.2,0.2-1.7,0.6c-0.5,0.4-0.7,1-0.7,1.6
+			c0,1.2,1.4,2.3,4.1,3.5c3.7,1.6,6.2,3.1,7.5,4.4c1.3,1.4,1.9,3.2,1.9,5.5c0,2.9-1.1,5.4-3.2,7.4c-2.1,1.9-4.6,2.8-7.6,2.8
+			c-5.1,0-8.7-2.5-10.8-7.5l6-2.8c0.8,1.5,1.5,2.4,1.9,2.8c0.9,0.8,1.9,1.2,3.1,1.2c2.4,0,3.6-1.1,3.6-3.2c0-1.2-0.9-2.4-2.8-3.5
+			c-0.7-0.4-1.4-0.7-2.1-1c-0.7-0.3-1.4-0.7-2.2-1c-2-1-3.5-2-4.3-3c-1.1-1.3-1.6-2.9-1.6-4.9c0-2.6,0.9-4.8,2.7-6.6
+			c1.9-1.7,4.1-2.6,6.8-2.6C642.8,670.8,645.7,672.8,647.5,676.9z"/>
+		<path fill="#FFFFFF" d="M662.9,671.7v17.5c0,5,2,7.6,6,7.6c4,0,6-2.5,6-7.6v-17.5h7v17.6c0,2.4-0.3,4.5-0.9,6.3
+			c-0.6,1.6-1.6,3-3,4.3c-2.4,2.1-5.4,3.1-9.1,3.1c-3.6,0-6.7-1-9-3.1c-1.5-1.3-2.5-2.7-3.1-4.3c-0.6-1.4-0.9-3.5-0.9-6.3v-17.6
+			H662.9z"/>
+		<path fill="#FFFFFF" d="M690.7,671.7h7v2.7c1.3-1.4,2.4-2.3,3.4-2.8c1-0.5,2.2-0.8,3.6-0.8c1.9,0,3.8,0.6,5.8,1.8l-3.2,6.4
+			c-1.3-1-2.6-1.4-3.9-1.4c-3.8,0-5.8,2.9-5.8,8.7v15.8h-7V671.7z"/>
+		<path fill="#FFFFFF" d="M724,678.2v23.9H717v-23.9h-2.5v-6.6h2.5v-11.8c0-3.8,0.7-6.5,2-8.1c1.8-2.2,4.5-3.3,8-3.3
+			c1.2,0,2.8,0.4,4.7,1.1v7.2l-0.7-0.4c-1.5-0.8-2.8-1.2-3.8-1.2c-1.2,0-2.1,0.4-2.5,1.3c-0.4,0.9-0.7,2.6-0.7,5.1v10h7.7v6.6H724z"
+			/>
+		<path fill="#FFFFFF" d="M759.2,671.7h7.1v30.4h-7.1v-3.2c-2.9,2.7-6,4.1-9.3,4.1c-4.2,0-7.7-1.5-10.4-4.6c-2.7-3.1-4.1-7-4.1-11.6
+			c0-4.6,1.4-8.4,4.1-11.4c2.7-3,6.1-4.6,10.2-4.6c3.5,0,6.7,1.5,9.5,4.4V671.7z M742.5,686.8c0,2.9,0.8,5.3,2.3,7.1
+			c1.6,1.9,3.6,2.8,6.1,2.8c2.6,0,4.7-0.9,6.3-2.7c1.6-1.9,2.4-4.2,2.4-7.1c0-2.9-0.8-5.2-2.4-7.1c-1.6-1.8-3.7-2.7-6.2-2.7
+			c-2.4,0-4.4,0.9-6.1,2.8C743.3,681.8,742.5,684.1,742.5,686.8z"/>
+		<path fill="#FFFFFF" d="M798.8,673v9.3c-1.6-2-3-3.3-4.3-4c-1.2-0.8-2.7-1.1-4.4-1.1c-2.6,0-4.8,0.9-6.6,2.8
+			c-1.8,1.9-2.6,4.2-2.6,7c0,2.9,0.8,5.2,2.5,7c1.7,1.8,3.9,2.8,6.5,2.8c1.7,0,3.2-0.4,4.5-1.1c1.2-0.7,2.7-2.1,4.4-4.1v9.3
+			c-2.9,1.5-5.7,2.2-8.6,2.2c-4.7,0-8.6-1.5-11.8-4.6c-3.2-3.1-4.8-6.9-4.8-11.4c0-4.5,1.6-8.4,4.8-11.5c3.2-3.1,7.1-4.7,11.8-4.7
+			C793.3,670.8,796.1,671.5,798.8,673z"/>
+		<path fill="#FFFFFF" d="M833.3,688.5h-21.8c0.2,2.5,1,4.5,2.4,6c1.4,1.5,3.3,2.2,5.5,2.2c1.8,0,3.2-0.4,4.3-1.2
+			c1.1-0.8,2.4-2.4,3.8-4.6l5.9,3.3c-0.9,1.6-1.9,2.9-2.9,4c-1,1.1-2.1,2-3.3,2.8c-1.2,0.7-2.4,1.2-3.8,1.6
+			c-1.4,0.3-2.8,0.5-4.4,0.5c-4.5,0-8.2-1.5-10.9-4.4c-2.8-2.9-4.1-6.8-4.1-11.7c0-4.8,1.3-8.7,4-11.7c2.7-2.9,6.2-4.4,10.7-4.4
+			c4.5,0,8,1.4,10.6,4.3c2.6,2.8,3.9,6.8,3.9,11.8L833.3,688.5z M826.1,682.8c-1-3.8-3.3-5.6-7.1-5.6c-0.9,0-1.7,0.1-2.4,0.4
+			c-0.8,0.3-1.4,0.6-2,1.1c-0.6,0.5-1.1,1.1-1.6,1.8s-0.8,1.5-1,2.3H826.1z"/>
+		<path fill="#FFFFFF" d="M675,742.2v23.9h-7v-23.9h-3v-6.6h3v-11.2h7v11.2h5.5v6.6H675z"/>
+		<path fill="#FFFFFF" d="M684.2,750.7c0-4.4,1.6-8.1,4.7-11.2c3.1-3.1,7-4.6,11.5-4.6c4.5,0,8.4,1.6,11.6,4.7
+			c3.1,3.1,4.7,6.9,4.7,11.4c0,4.6-1.6,8.4-4.7,11.5c-3.2,3.1-7.1,4.6-11.7,4.6c-4.6,0-8.4-1.6-11.5-4.7
+			C685.8,759.2,684.2,755.3,684.2,750.7z M691.4,750.8c0,3,0.8,5.4,2.4,7.2c1.7,1.8,3.9,2.7,6.6,2.7c2.8,0,4.9-0.9,6.6-2.7
+			c1.6-1.8,2.5-4.1,2.5-7.1c0-3-0.8-5.3-2.5-7.1c-1.7-1.8-3.9-2.7-6.6-2.7c-2.7,0-4.9,0.9-6.5,2.7
+			C692.3,745.7,691.4,748,691.4,750.8z"/>
+		<path fill="#FFFFFF" d="M614.2,777.3h7.1v52.8h-7.1v-3.2c-2.8,2.7-5.9,4.1-9.4,4.1c-4.2,0-7.6-1.5-10.4-4.6
+			c-2.7-3.1-4.1-7-4.1-11.6c0-4.5,1.4-8.3,4.1-11.4c2.7-3.1,6.1-4.6,10.2-4.6c3.6,0,6.8,1.5,9.6,4.4V777.3z M597.5,814.8
+			c0,2.9,0.8,5.3,2.3,7.1c1.6,1.9,3.6,2.8,6.1,2.8c2.6,0,4.7-0.9,6.3-2.7c1.6-1.9,2.4-4.2,2.4-7.1c0-2.9-0.8-5.2-2.4-7.1
+			c-1.6-1.8-3.7-2.7-6.2-2.7c-2.4,0-4.4,0.9-6.1,2.8C598.3,809.8,597.5,812.1,597.5,814.8z"/>
+		<path fill="#FFFFFF" d="M629.1,787c0-1.2,0.4-2.3,1.3-3.2c0.9-0.9,2-1.3,3.2-1.3c1.3,0,2.4,0.4,3.2,1.3c0.9,0.9,1.3,1.9,1.3,3.2
+			c0,1.3-0.4,2.4-1.3,3.2c-0.9,0.9-1.9,1.3-3.2,1.3c-1.3,0-2.4-0.4-3.2-1.3C629.5,789.4,629.1,788.3,629.1,787z M637.2,799.7v30.4
+			h-7v-30.4H637.2z"/>
+		<path fill="#FFFFFF" d="M663.8,804.9L658,808c-0.9-1.9-2.1-2.8-3.4-2.8c-0.6,0-1.2,0.2-1.7,0.6c-0.5,0.4-0.7,1-0.7,1.6
+			c0,1.2,1.4,2.3,4.1,3.5c3.7,1.6,6.2,3.1,7.5,4.4c1.3,1.4,1.9,3.2,1.9,5.5c0,2.9-1.1,5.4-3.2,7.4c-2.1,1.9-4.6,2.8-7.6,2.8
+			c-5.1,0-8.7-2.5-10.8-7.5l6-2.8c0.8,1.5,1.5,2.4,1.9,2.8c0.9,0.8,1.9,1.2,3.1,1.2c2.4,0,3.6-1.1,3.6-3.2c0-1.2-0.9-2.4-2.8-3.5
+			c-0.7-0.4-1.4-0.7-2.1-1c-0.7-0.3-1.4-0.7-2.2-1c-2-1-3.5-2-4.3-3c-1.1-1.3-1.6-2.9-1.6-4.9c0-2.6,0.9-4.8,2.7-6.6
+			c1.9-1.7,4.1-2.6,6.8-2.6C659,798.8,661.9,800.8,663.8,804.9z"/>
+		<path fill="#FFFFFF" d="M679.1,846.7h-7v-47h7v3.3c2.8-2.8,5.9-4.2,9.4-4.2c4.2,0,7.6,1.5,10.3,4.6c2.8,3.1,4.1,6.9,4.1,11.6
+			c0,4.6-1.4,8.4-4.1,11.4c-2.7,3-6.1,4.5-10.2,4.5c-3.6,0-6.8-1.4-9.6-4.3V846.7z M695.8,815.1c0-2.9-0.8-5.3-2.4-7.1
+			c-1.6-1.9-3.6-2.8-6.1-2.8c-2.6,0-4.7,0.9-6.3,2.7c-1.6,1.8-2.4,4.1-2.4,7.1c0,2.9,0.8,5.2,2.4,7.1c1.6,1.8,3.7,2.7,6.2,2.7
+			c2.4,0,4.4-0.9,6-2.8C695,820.1,695.8,817.8,695.8,815.1z"/>
+		<path fill="#FFFFFF" d="M717.5,777.3v52.8h-7v-52.8H717.5z"/>
+		<path fill="#FFFFFF" d="M748.8,799.7h7.1v30.4h-7.1v-3.2c-2.9,2.7-6,4.1-9.3,4.1c-4.2,0-7.7-1.5-10.4-4.6c-2.7-3.1-4.1-7-4.1-11.6
+			c0-4.6,1.4-8.4,4.1-11.4c2.7-3,6.1-4.6,10.2-4.6c3.5,0,6.7,1.5,9.5,4.4V799.7z M732.1,814.8c0,2.9,0.8,5.3,2.3,7.1
+			c1.6,1.9,3.6,2.8,6.1,2.8c2.6,0,4.7-0.9,6.3-2.7c1.6-1.9,2.4-4.2,2.4-7.1c0-2.9-0.8-5.2-2.4-7.1c-1.6-1.8-3.7-2.7-6.2-2.7
+			c-2.4,0-4.4,0.9-6.1,2.8C732.9,809.8,732.1,812.1,732.1,814.8z"/>
+		<path fill="#FFFFFF" d="M774.9,824.5l-13.7-24.8h8.2l9.3,17.5l8.7-17.5h7.9l-24.2,47h-8L774.9,824.5z"/>
+	</g>
+	<line fill="none" stroke="#FFFFFF" stroke-width="10" stroke-miterlimit="10" x1="888.6" y1="758.3" x2="1125.4" y2="758.3"/>
+	<g>
+		<polygon fill="#FFFFFF" points="856.6,505.5 888.6,430.6 920.6,505.5 		"/>
+	</g>
+	<line fill="none" stroke="#FFFFFF" stroke-width="10" stroke-miterlimit="10" x1="888.6" y1="449.1" x2="888.6" y2="758.3"/>
+</g>
+<ellipse id="Head_2_" fill="none" stroke="#FFFFFF" stroke-width="20" stroke-miterlimit="10" cx="889.1" cy="266.8" rx="112.6" ry="139.8"/>
+<g class="fragment" id="Merged">
+	<path fill="none" stroke="#FFFFFF" stroke-width="10" stroke-miterlimit="10" d="M597.6,550.9H69c-35.2,0-64-18.1-64-40.2V113.3
+		c0-22.1,28.8-40.2,64-40.2h528.6c35.2,0,64,18.1,64,40.2v108.6l86,52.8l-86,44.8v191.3C661.6,532.9,632.8,550.9,597.6,550.9z"/>
+	<path fill="none" stroke="#FFFFFF" stroke-width="10" stroke-miterlimit="10" d="M121.4,126.9h400.5c35.2,0,64,28.8,64,64v151.6
+		c0,35.2-28.8,64-64,64H121.4c-35.2,0-64-28.8-64-64V190.9C57.4,155.7,86.2,126.9,121.4,126.9z"/>
+	<ellipse fill="none" stroke="#FFFFFF" stroke-width="8" stroke-miterlimit="10" cx="210.4" cy="188.6" rx="32.6" ry="33.3"/>
+	<line fill="none" stroke="#FFFFFF" stroke-width="8" stroke-miterlimit="10" x1="57.4" y1="297.2" x2="585.9" y2="297.2"/>
+	<rect x="243" y="244.1" fill="#FFFFFF" width="107.3" height="92.6"/>
+	<g>
+		<path fill="#FFFFFF" d="M184.4,443.8l15.7,40.3l16.4-43.2l15.7,43.2l16.7-40.3h9.9l-27,64.1l-15.5-42.7L200.1,508l-25.6-64.2
+			H184.4z"/>
+		<path fill="#FFFFFF" d="M260.5,473.7c0-8.5,3.1-15.8,9.3-21.9c6.2-6.1,13.6-9.1,22.3-9.1c8.6,0,16,3.1,22.1,9.2
+			c6.2,6.1,9.3,13.5,9.3,22.1c0,8.7-3.1,16-9.3,22.1c-6.2,6.1-13.7,9.1-22.5,9.1c-7.8,0-14.8-2.7-21-8.1
+			C263.9,491.2,260.5,483.4,260.5,473.7z M269.7,473.8c0,6.7,2.2,12.1,6.7,16.4c4.5,4.3,9.6,6.4,15.4,6.4c6.3,0,11.7-2.2,16-6.6
+			c4.3-4.4,6.5-9.8,6.5-16.2c0-6.4-2.1-11.8-6.4-16.2c-4.3-4.4-9.6-6.6-15.9-6.6c-6.3,0-11.6,2.2-15.9,6.6
+			C271.9,462.1,269.7,467.5,269.7,473.8z"/>
+		<path fill="#FFFFFF" d="M367.4,489.5h-25.8l-6.7,14.6h-9.8l29.8-64.1l28.8,64.1h-10L367.4,489.5z M363.7,480.9l-8.9-20.5
+			l-9.4,20.5H363.7z"/>
+		<path fill="#FFFFFF" d="M400.3,467.4h26v-23.6h9.1v60.3h-9.1V476h-26v28.2h-9.1v-60.3h9.1V467.4z"/>
+		<path fill="#FFFFFF" d="M450.5,499.8c0-1.5,0.5-2.7,1.6-3.8c1.1-1.1,2.3-1.6,3.8-1.6s2.8,0.5,3.8,1.6c1.1,1.1,1.6,2.3,1.6,3.8
+			c0,1.5-0.5,2.8-1.6,3.9c-1,1-2.3,1.6-3.8,1.6c-1.5,0-2.8-0.5-3.9-1.6C451,502.6,450.5,501.3,450.5,499.8z M451.5,490.7v-46.9h8.8
+			v46.9H451.5z"/>
+	</g>
+</g>
+</svg>
+          </section>
+          <section>
+            <h3>A device that gives positional data &amp; a surface to draw on?</h3>
+            <p class="fragment">Sounds alot like a smart phone!</p>
+          </section>
+          <section data-background="images/Samsung-Gear-VR-Powered-by-Oculus-Rift-swipe-life-1.jpg">
+          </section>
+          <section data-background="images/GC_p2.jpg">
+          </section>
+          <section data-background="images/googlecardboard.jpg">
+            <a style="display: block; margin-top: 50%;" href="https://www.google.com/get/cardboard/">google.com/get/cardboard</a>
+          </section>
+          <section>
+            <h2>EXERCISE</h2>
+            <h3>Build your Google Cardboard Headset</h3>
+          </section>
+        </section>
+        <section>
+          <section data-background="images/matrix.gif">
+            <h2>Build a World</h2>
+          </section>
+          <section>
+            <h3>Anything 3D means OpenGL</h3>
+            <p>Headset native libraries provide compatible interfaces.</p>
+          </section>
+          <section>
+            <h2>BUT...</h2>
+          </section>
+          <section>
+            <h3>Math is hard!</h3>
+            <p>OpenGL is an extremely low-level framework. Drawing a simple cube can be very verbose.</p>
+          </section>
+          <section>
+            <h3>Use a 3D Engine</h3>
+            <p>Work with a higher-level abstraction to focus on the content.</p>
+          </section>
+          <section class="has-light-background" data-background="#ffffff">
+            <img alt="unity" src="images/unity.png" /><br>
+            <a href="http://unity3d.com">unity3d.com</a>
+          </section>
+          <section>
+            <h3>Higher-Level Abstractions are Universal</h3>
+            <p>Regardless of what engine or framework or engine you use, there are a core set of objects you'll work with.</p>
+          </section>
+          <section>
+            <h3>Scene</h3>
+            <p>This is the world</h3>
+          </section>
+          <section>
+            <h3>Objects have a 3D position and rotation</h3>
+            <p>Traditionally, x is left to right, y is down to up, and z is back to front.<br>
+            (0,0,0) is dead center.</p>
+          </section>
+          <section>
+            <h3>Objects have a Hierarchy</h3>
+            <p>They can have parent-child relationships. Parent's positioning affects childrens. The scene is the ultimate parent.</p>
+          </section>
+          <section>
+            <h3>Camera</h3>
+            <p>We render (draw) what we can see through a camera.</p>
+          </section>
+          <section>
+            <h3>Let there be Light</h3>
+            <p>Without light we cannot see anything!</p>
+          </section>
+          <section>
+            <h3>Visible Objects</h3>
+            <p>Made of meshes and materials.<br>
+            Meshes define the shape.<br>
+            Materials define the skin, and are made up of textures (images).<br>
+          </section>
+          <section>
+            <h3>Scripting says what happens on each frame</h3>
+          </section>
+          <section>
+            <pre><code class="cs" data-trim>
+using UnityEngine;
+using System.Collections;
+
+public class RandomRotator : MonoBehaviour {
+  public float tumble;
+  private Vector3 axis;
+
+  // Use this for initialization
+ void Start () {
+    axis = Random.insideUnitSphere;
+  }
+
+  // Update is called once per frame
+  void Update () {
+    transform.Rotate (axis * tumble * Time.deltaTime);
+  }
+}
+            </code></pre>
+          </section>
+          <section>
+            <h2>EXERCISE</h3>
+            <h3>Let's make a scene</h3>
+          </section>
+        </section>
+        <section>
+          <section data-background="images/tron6.gif">
+            <h2>Enter VR</h2>
+          </section>
+          <section>
+            <h3>Remember, we have to draw a stereoscopic view</h3>
+            <p>A left eye view and a right eye view into the world.</p>
+          </section>
+          <section>
+            <h3>How do we accomplish this?</h3>
+            <ul>
+              <li class="fragment" style="list-style-type: none;">&nbsp;&nbsp;We render a camera's view.</li>
+              <li class="fragment" style="list-style-type: none;">+ Objects can have parents.</li>
+              <li class="fragment" style="list-style-type: none;">+ Camera's are object</li>
+              <li class="fragment" style="list-style-type: none; border-top: 10px solid white;">&nbsp;&nbsp;Create a camera for each eye<br>&nbsp;&nbsp;under the main camera!</li>
+            </ul>
+          </section>
+          <section>
+            <h3>All platforms automate this for you.</h3>
+            <p>It's going to be easiest thing we do all day.</p>
+          </section>
+          <section>
+            <h2>EXERCISE</h2>
+            <h3>Let's do it</h3>
+          </section>
+        </section>
+        <section>
+          <section data-background="images/interaction.jpg">
+            <h2>Interaction</h2>
+          </section>
+          <section>
+            <h3>All the Unity Inputs</h3>
+            <p>Keyboard, mouse, gamepad, and more...</p>
+          </section>
+          <section data-background="images/leapmotion1.gif">
+          </section>
+          <section data-background-video="images/leap_motion.mp4,images/leap_motion.webm">
+          </section>
+          <section>
+            <h2>BUT...</h2>
+          </section>
+          <section>
+            <h3>Not all of this is available on every device.</h3>
+            <p>On a Cardboard mounted Android device you don't get touch.</p>
+          </section>
+          <section>
+            <h3>Headsets have vastly different headsets</h3>
+            <p>You DO get the trigger; side-mounted magnet that the phone can sense.</p>
+          </section>
+          <section>
+            <h2>BUT...</h2>
+          </section>
+          <section>
+            <h3>There is one interaction that rules them all...</h3>
+            <p class="fragment">That is, there is one interaction available on all platforms.</p>
+          </section>
+          <section>
+            <h3>Gaze</h3>
+            <p>Where you are looking can trigger a change to environment or storyline.</p>
+          </section>
+          <section data-background="images/wild.jpg"></section>
+          <section>
+            <h2>How?</h2>
+          </section>
+          <section>
+            <h3>Cast a Ray</h3>
+            <p>A ray is a line that starts in the camera position and goes inifinitely in the direction the camera is facing.
+            Anything intersecting the ray is in line of sight.</p>
+          </section>
+          <section>
+            <pre><code class="cs" data-trim>
+RaycastHit hit;
+Ray ray = new Ray(Camera.main.transform.position,
+                  Camera.main.transform.forward);
+isLookedAt = GetComponent&lt;CapsuleCollider&gt; ()
+  .Raycast (ray, out hit, Mathf.Infinity);
+
+// When the Asteroid is looked at and the magnet is triggered,
+// blow up the Asteroid
+if (Cardboard.SDK.CardboardTriggered &amp;&amp; isLookedAt) {
+  ScoreManager.score += 5;
+  Instantiate (explosion,
+               hit.transform.position,
+               hit.transform.rotation);
+  Destroy (gameObject);
+}
+            </code></pre>
+          </section>
+          <section>
+            <h2>EXERCISE</h2>
+            <h3>Shoot some Asteroids!</h3>
+          </section>
+        </section>
+        <section>
+          <section data-background="images/tron7.gif">
+            <h2>Challenges</h2>
+          </section>
+          <section>
+            <h3>Simulator Sickness is Real</h3>
+            <p>Need to hit 60-90 fps.
+            Motion data already laggy.
+            More graphics you push the harder this gets.</p>
+          </section>
+          <section data-background="images/Tron_116Pyxurz.jpg">
+          </section>
+          <section data-background="images/360video.png">
+            <h3 style="margin-top: 40%;">Consider 360 Video</h3>
+          </section>
+          <section>
+            <h3>The ground is constantly changing</h3>
+            <p>Beta software running on beta hardware.<br>
+            Things break constantly.</p>
+          </section>
+          <section>
+            <h3>2D is Hard</h3>
+            <p>You can’t just draw on the screen; have to take into account stereoscopic view.</p>
+          </section>
+          <section>
+            <h3>Draw on a Plane in front of the camera</h3>
+            <p>Unity UI draws on a Canvas you place in "worldspace".</p>
+          </section>
+          <section>
+            <h2>EXERCISE</h2>
+            <h3>Score!</h3>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h2>SO THAT'S IT</h2>
+          </section>
+          <section data-background="images/i-know-kung-fu.png"></section>
+          <section>
+            <h3>How do we move beyond Cardboard?</h3>
+          </section>
+          <section>
+            <h3>Most Game Engines allow you to support multiple platforms</h3>
+            <p>In Unity simply attach the platform appropriate component.</p>
+          </section>
+          <section><h2>BUT...</h3></section>
+          <section>
+            <h3>As mentioned there is a wide range of available interactions.</h3>
+            <p>How do you shape an experience that supports them all?</p>
+          </section>
+          <section>
+            <h3>Responsive VR</h3>
+            <p>With credit to <a href="http://smus.com/responsive-vr/">Boris Smus</a><br>
+            "Simple" devices get the roller coaster ride.<br>
+            Richer devices provide richer interactions.</p>
+          </section>
+          <section data-background-video="images/minecart.mp4,images/minecart.webm" data-background="#000000">
+          </section>
+        </section>
+        <section>
+          <section>
+            <h2>Danke!</h2>
+          </section>
+          <section>
+            <div class="presenters">
+              <div class="presenter">
+                <img class="avatar" src="images/sueannayeh.jpeg" alt="Sue Anna Yeh" />
+                Sue Anna Yeh<br>
+                <a href="http://twitter.com/sueannayeh">@sueannayeh</a><br>
+                <a href="mailto:sueanna@carbonfive.com">sueanna@carbonfive.com</a>
+              </div>
+              <div class="presenter">
+                <img class="avatar" src="images/rudyjahchan.jpg" alt="Rudy Jahchan" />
+                Rudy Jahchan<br>
+                <a href="http://twitter.com/rudy">@rudy</a><br>
+                <a href="mailto:rudy@carbonfive.com">rudy@carbonfive.com</a>
+              </div>
+            </div>
+          </section>
+        </section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+        width: 1920,
+        height: 1080,
+        margin: 0.2,
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>

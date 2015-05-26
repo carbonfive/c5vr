@@ -1,0 +1,48 @@
+{
+  "name": "getting-started-in-vr-droidcon2015",
+  "version": "1.0.0",
+  "description": "A workshop presentation for DroidCon Berlin 2015",
+  "homepage": "http://carbonfive.github.io/getting-started-in-vr-droidcon2015",
+  "main": "js/reveal.js",
+  "scripts": {
+    "test": "grunt test",
+    "start": ""
+  },
+  "contributors": [
+    {
+      "name": "Sueanna Yeh",
+      "email": "sueanna@carbonfive.com"
+    },
+    {
+      "name": "Rudy Jahchan",
+      "email": "rudy@carbonfive.com",
+      "web": "http://rudyjahchan.com"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/carbonfive/getting-started-in-vr-droidcon2015"
+  },
+  "engines": {
+    "node": "~0.10.0"
+  },
+  "dependencies": {
+    "underscore": "~1.5.1",
+    "express": "~2.5.9",
+    "mustache": "~0.7.2",
+    "socket.io": "~0.9.16"
+  },
+  "devDependencies": {
+    "grunt-contrib-qunit": "~0.5.2",
+    "grunt-contrib-jshint": "~0.6.4",
+    "grunt-contrib-cssmin": "~0.4.1",
+    "grunt-contrib-uglify": "~0.2.4",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-sass": "~0.14.0",
+    "grunt-contrib-connect": "~0.8.0",
+    "grunt-autoprefixer": "~1.0.1",
+    "grunt-zip": "~0.7.0",
+    "grunt": "~0.4.0",
+    "node-sass": "~0.9.3"
+  }
+}

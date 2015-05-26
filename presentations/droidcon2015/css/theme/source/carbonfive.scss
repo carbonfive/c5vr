@@ -1,0 +1,92 @@
+/**
+ * Carbon Five theme for reveal.js.
+ *
+ * Copyright (C) 2015 Hakim El Hattab, http://hakim.se
+ */
+
+
+// Default mixins and settings -----------------
+@import "../template/mixins";
+@import "../template/settings";
+// ---------------------------------------------
+
+
+// Include theme-specific fonts
+@import url(../../lib/font/source-sans-pro/source-sans-pro.css);
+
+
+// Override theme settings (see ../template/settings.scss)
+$backgroundColor: #042028;
+
+$mainColor: #fff;
+$headingColor: #fff;
+
+$mainFontSize: 64pt;
+$mainFont: 'Futura', Helvetica, sans-serif;
+$headingFont: 'Futura', Helvetica, sans-serif;
+$headingTextShadow: none;
+$headingLetterSpacing: normal;
+$headingTextTransform: normal;
+$headingFontWeight: normal;
+$linkColor: #fff;
+$linkColorHover: lighten( $linkColor, 15% );
+$selectionBackgroundColor: lighten( $linkColor, 25% );
+
+$heading1Size: 2.5em;
+$heading2Size: 3.2em;
+$heading3Size: 1.3em;
+$heading4Size: 1.0em;
+
+section.has-light-background {
+	&, h1, h2, h3, h4, h5, h6 {
+		color: #222;
+	}
+}
+
+
+// Theme template ------------------------------
+@import "../template/theme";
+// ---------------------------------------------
+
+.reveal section img {
+  border: none;
+  box-shadow: none;
+}
+
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4 {
+  text-align: left;
+}
+
+.presenters {
+  display: flex;
+  flex-direction: row;
+
+  .presenter {
+    disply: flex;
+    flex-direction: column;
+    width: 50%;
+    text-align: center;
+    font-size: 0.8em;
+
+    .avatar {
+      display:block;
+      margin: 0 auto;
+      width: 66%;
+      border-width: 0.5em;
+    }
+  }
+}
+
+p { text-align: left; }
+
+section.has-light-background {
+  a { color: black; }
+}
+
+.reveal pre code {
+  max-height: 100%;
+  font-size: 32pt;
+}
