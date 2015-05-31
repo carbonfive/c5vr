@@ -60,14 +60,29 @@
               </div>
             </div>
           </section>
+          <section data-background="#ffffff">
+            <a href="http://carbonfive.com"><img alt="Carbon Five" src="images/carbonfive.png"></a>
+          </section>
           <section>
-            <h1>Getting Started in VR</h1>
+            <h2>The Dream</h2>
           </section>
           <section data-background="images/tron2.gif"></section>
-          <section data-background="images/lawnmowerman2.gif"></section>
-          <section data-background="images/johnny.jpg"></section>
+          <section data-background="#000000"><img alt="Neuromancer" src="images/Neuromancer.jpg" />
+          <img alt="Snow Crash" src="images/snowcrash.jpg" /></section>
+          <section data-background="images/matrix.gif"></section>
+          <section>
+            <h3>The Dream of fully entring a Digital world</h3>
+          </section>
+          <section>
+            <h3>The Dream of Virtual Reality</h3>
+          </section>
+          <section data-background="images/lawnmowerman1.gif"></section>
+          <section data-background="images/vbad2.jpg"></section>
           <section data-background="#000000"></section>
           <section data-background="images/kickstart.png"></section>
+          <section data-background="images/headsets.jpg"></section>
+          <section data-background="images/rift_2.jpg"></section>
+          <section data-background="images/newGoogleCardboard.jpg"></section>
           <section data-background="#ffffff">
             <img alt="The Future is Meow" src="images/The-Future-Is-Meow.png" style="width: 100%;">
           </section>
@@ -75,20 +90,107 @@
           <section data-background="#ffffff">
             <a href="http://carbonfive.com"><img alt="Carbon Five" src="images/carbonfive.png"></a>
           </section>
+          <section data-background="images/murdershewrote1.png">
+          </section>
+          <section>
+            <h1>Getting Started in VR</h1>
+          </section>
           <section>
             <h3>We're giving you a kit</h3>
-            <p>Includes the software (Windows and Mac), a Google Cardboard headset, the assets and code for the game, and a sticker.</p>
+            <p>Includes the software (Windows and Mac), a Google Cardboard headset, the assets and code for the game, and a super-special sticker.</p>
           </section>
           <section>
-            <h3>Resources</h3>
+            <h3>This Kit will be Available at <a href="http://c5vr.com">c5vr.com</a></h3>
+            <p>(Except the sticker, that's super-special.)</p>
+          </section>
+          <section>
             <ul>
-              <li><a href="http://unity3d.com">Unity3D</a></li>
-              <li><a href="https://developer.android.com/sdk/index.html">Android Studio</a></li>
-              <li><a href="https://developers.google.com/cardboard/">Google Cardboard Libraries</a></li>
-              <li><a href="http://c5vr.com">c5vr.com</a></li>
+              <li>Unity3D</li>
+              <li>Android Studio</li>
+              <li>Google Cardboard</li>
             </ul>
           </section>
-          <section data-background="images/matrix.jpg"></section>
+        </section>
+        <section>
+          <section data-background="images/matrix.gif">
+            <h2>Build a World</h2>
+          </section>
+          <section>
+            <h3>Anything 3D means OpenGL</h3>
+            <p>Headset native libraries provide compatible interfaces.</p>
+          </section>
+          <section>
+            <h2>BUT...</h2>
+          </section>
+          <section>
+            <h3>Math is hard!</h3>
+            <p>OpenGL is an extremely low-level framework. Drawing a simple cube can be very verbose.</p>
+          </section>
+          <section>
+            <h3>Use a 3D Engine</h3>
+            <p>Work with a higher-level abstraction to focus on the CONTENT.</p>
+          </section>
+          <section class="has-light-background" data-background="#ffffff">
+            <img alt="unity" src="images/unity.png" /><br>
+            <a href="http://unity3d.com">unity3d.com</a>
+          </section>
+          <section>
+            <h3>We're not going to teach you Unity</h3>
+            <p>Read the excellent documentation at:<br>
+            <a href="http://unity3d.com/learn">unity3d.com/learn</a>
+            </p>
+          </section>
+          <section>
+            <h3>We're not even suggesting Unity is the best</h3>
+            <p>Again it's about the higher-level abstractions.</p>
+          </section>
+          <section>
+            <h3>Higher-Level Abstractions are Universal</h3>
+            <p>Regardless of what engine or framework or engine you use, there are a core set of ideas you'll work with.</p>
+          </section>
+          <section>
+            <h3>Scene</h3>
+            <p>This is the world</p>
+          </section>
+          <section>
+            <h3>Objects have a 3D position and rotation</h3>
+            <p>Traditionally, x is left to right, y is down to up, and z is back to front.<br>
+            (0,0,0) is dead center.</p>
+          </section>
+          <section>
+            <h3>Objects have a Hierarchy</h3>
+            <p>They can have parent-child relationships.<br>Parent's positioning affects children's.<br>The scene is the ultimate parent.</p>
+          </section>
+          <section>
+            <h3>Camera</h3>
+            <p>We render (draw) what we can see through a camera.</p>
+          </section>
+          <section>
+            <h3>Let there be Light</h3>
+            <p>Without light we cannot see anything!</p>
+          </section>
+          <section>
+            <h3>Visible Objects are Made of Meshes and Materials</h3>
+            <p>Meshes define the shape.<br>
+            Materials define the skin, and are made up of <em>textures</em> (images).<br>
+          </section>
+          <section>
+            <h3>Scripting says what happens on each frame</h3>
+          </section>
+          <section>
+            <ul>
+              <li>Scene</li>
+              <li>Object</li>
+              <li>Camera</li>
+              <li>Light</li>
+              <li>Meshes, Material, and Textures</li>
+              <li>Scripting</li>
+            </ul>
+          </section>
+          <section>
+            <h2>EXERCISE</h2>
+            <h3>Let's make a scene</h3>
+          </section>
         </section>
         <section>
           <section data-background="images/headset.jpg">
@@ -365,8 +467,6 @@
             <h3>A device that gives positional data &amp; a surface to draw on?</h3>
             <p class="fragment">Sounds alot like a smart phone!</p>
           </section>
-          <section data-background="images/Samsung-Gear-VR-Powered-by-Oculus-Rift-swipe-life-1.jpg">
-          </section>
           <section data-background="images/GC_p2.jpg">
           </section>
           <section data-background="images/googlecardboard.jpg">
@@ -376,89 +476,24 @@
             <h2>EXERCISE</h2>
             <h3>Build your Google Cardboard Headset</h3>
           </section>
-        </section>
-        <section>
-          <section data-background="images/matrix.gif">
-            <h2>Build a World</h2>
-          </section>
-          <section>
-            <h3>Anything 3D means OpenGL</h3>
-            <p>Headset native libraries provide compatible interfaces.</p>
-          </section>
-          <section>
-            <h2>BUT...</h2>
-          </section>
-          <section>
-            <h3>Math is hard!</h3>
-            <p>OpenGL is an extremely low-level framework. Drawing a simple cube can be very verbose.</p>
-          </section>
-          <section>
-            <h3>Use a 3D Engine</h3>
-            <p>Work with a higher-level abstraction to focus on the content.</p>
-          </section>
-          <section class="has-light-background" data-background="#ffffff">
-            <img alt="unity" src="images/unity.png" /><br>
-            <a href="http://unity3d.com">unity3d.com</a>
-          </section>
-          <section>
-            <h3>Higher-Level Abstractions are Universal</h3>
-            <p>Regardless of what engine or framework or engine you use, there are a core set of objects you'll work with.</p>
-          </section>
-          <section>
-            <h3>Scene</h3>
-            <p>This is the world</h3>
-          </section>
-          <section>
-            <h3>Objects have a 3D position and rotation</h3>
-            <p>Traditionally, x is left to right, y is down to up, and z is back to front.<br>
-            (0,0,0) is dead center.</p>
-          </section>
-          <section>
-            <h3>Objects have a Hierarchy</h3>
-            <p>They can have parent-child relationships. Parent's positioning affects childrens. The scene is the ultimate parent.</p>
-          </section>
-          <section>
-            <h3>Camera</h3>
-            <p>We render (draw) what we can see through a camera.</p>
-          </section>
-          <section>
-            <h3>Let there be Light</h3>
-            <p>Without light we cannot see anything!</p>
-          </section>
-          <section>
-            <h3>Visible Objects</h3>
-            <p>Made of meshes and materials.<br>
-            Meshes define the shape.<br>
-            Materials define the skin, and are made up of textures (images).<br>
-          </section>
-          <section>
-            <h3>Scripting says what happens on each frame</h3>
-          </section>
-          <section>
-            <pre><code class="cs" data-trim>
-using UnityEngine;
-using System.Collections;
-
-public class RandomRotator : MonoBehaviour {
-  public float tumble;
-  private Vector3 axis;
-
-  // Use this for initialization
- void Start () {
-    axis = Random.insideUnitSphere;
-  }
-
-  // Update is called once per frame
-  void Update () {
-    transform.Rotate (axis * tumble * Time.deltaTime);
-  }
-}
-            </code></pre>
-          </section>
-          <section>
-            <h2>EXERCISE</h3>
-            <h3>Let's make a scene</h3>
-          </section>
+          <section data-background="images/instruct01.jpg"></section>
+          <section data-background="images/instruct02.jpg"></section>
+          <section data-background="images/instruct03.jpg"></section>
+          <section data-background="images/instruct04.jpg"></section>
+          <section data-background="images/instruct05.jpg"></section>
+          <section data-background="images/instruct05a.jpg"></section>
+          <section data-background="images/instruct05b.jpg"></section>
+          <section data-background="images/instruct06.jpg"></section>
+          <section data-background="images/instruct07.jpg"></section>
+          <section data-background="images/instruct08.jpg"></section>
+          <section data-background="images/instruct08a.jpg"></section>
+          <section data-background="images/instruct08b.jpg"></section>
+          <section data-background="images/instruct08c.jpg"></section>
+          <section data-background="images/instruct10.jpg"></section>
+          <section data-background="images/instruct11.jpg"></section>
+          <section data-background="images/instruct12.jpg"></section>
+          <section data-background="images/instruct13.jpg"></section>
+          <section data-background="images/instruct14.jpg"></section>
         </section>
         <section>
           <section data-background="images/tron6.gif">
@@ -470,11 +505,15 @@ public class RandomRotator : MonoBehaviour {
           </section>
           <section>
             <h3>How do we accomplish this?</h3>
+            <p>Let's look at what we know</h3>
+          </section>
+          <section>
             <ul>
-              <li class="fragment" style="list-style-type: none;">&nbsp;&nbsp;We render a camera's view.</li>
+              <li class="fragment" style="list-style-type: none;">&nbsp;&nbsp;We need a view for each eye.</li>
+              <li class="fragment" style="list-style-type: none;">+ We render a view through a camera.</li>
+              <li class="fragment" style="list-style-type: none;">+ Cameras are object.</li>
               <li class="fragment" style="list-style-type: none;">+ Objects can have parents.</li>
-              <li class="fragment" style="list-style-type: none;">+ Camera's are object</li>
-              <li class="fragment" style="list-style-type: none; border-top: 10px solid white;">&nbsp;&nbsp;Create a camera for each eye<br>&nbsp;&nbsp;under the main camera!</li>
+              <li class="fragment" style="list-style-type: none; border-top: 10px solid white;margin-top:0.25em;">= Create a camera for each eye<br>&nbsp;&nbsp;under the main camera!</li>
             </ul>
           </section>
           <section>
@@ -503,11 +542,19 @@ public class RandomRotator : MonoBehaviour {
           </section>
           <section>
             <h3>Not all of this is available on every device.</h3>
-            <p>On a Cardboard mounted Android device you don't get touch.</p>
+            <p>On a Cardboard mounted Android device you don't even get touch.</p>
           </section>
           <section>
-            <h3>Headsets have vastly different headsets</h3>
-            <p>You DO get the trigger; side-mounted magnet that the phone can sense.</p>
+            <h3>Headsets have vastly different interaction capabilities</h3>
+            <p>On Cardbaord you get a "trigger".</p>
+          </section>
+          <section>
+            <h3>Responsive VR</h3>
+            <p>With credit to <a href="http://smus.com/responsive-vr/">Boris Smus</a><br>
+            "Simple" devices get the roller coaster ride.<br>
+            Richer devices provide complex experiences.</p>
+          </section>
+          <section data-background-video="images/minecart.mp4,images/minecart.webm" data-background="#000000">
           </section>
           <section>
             <h2>BUT...</h2>
@@ -530,25 +577,6 @@ public class RandomRotator : MonoBehaviour {
             Anything intersecting the ray is in line of sight.</p>
           </section>
           <section>
-            <pre><code class="cs" data-trim>
-RaycastHit hit;
-Ray ray = new Ray(Camera.main.transform.position,
-                  Camera.main.transform.forward);
-isLookedAt = GetComponent&lt;CapsuleCollider&gt; ()
-  .Raycast (ray, out hit, Mathf.Infinity);
-
-// When the Asteroid is looked at and the magnet is triggered,
-// blow up the Asteroid
-if (Cardboard.SDK.CardboardTriggered &amp;&amp; isLookedAt) {
-  ScoreManager.score += 5;
-  Instantiate (explosion,
-               hit.transform.position,
-               hit.transform.rotation);
-  Destroy (gameObject);
-}
-            </code></pre>
-          </section>
-          <section>
             <h2>EXERCISE</h2>
             <h3>Shoot some Asteroids!</h3>
           </section>
@@ -558,20 +586,47 @@ if (Cardboard.SDK.CardboardTriggered &amp;&amp; isLookedAt) {
             <h2>Challenges</h2>
           </section>
           <section>
+            <h3>Google's Documented Them and Solutions</h3>
+            <p><a href="http://www.google.com/design/spec-vr/designing-for-google-cardboard/a-new-dimension.html">
+              google.com/design/spec-vr/designing-for-google-cardboard/a-new-dimension.html</a>
+            </p>
+          </section>
+          <section>
+            <h3>The Cardboard Design Lab provides Great Examples</h3>
+            <p><a href="https://play.google.com/store/apps/details?id=com.google.vr.cardboard.apps.designlab">
+              play.google.com/store/apps/details?id=com.google.vr.cardboard.apps.designlab</a>
+          </section>
+          <section>
             <h3>Simulator Sickness is Real</h3>
             <p>Need to hit 60-90 fps.
             Motion data already laggy.
             More graphics you push the harder this gets.</p>
+          </section>
+          <section>
+            <h3>Also ...</h3>
+            <p>Don't move the user or not respond to their head movement.<br>
+            If you do move them, use constant velocity.
+            </p>
           </section>
           <section data-background="images/Tron_116Pyxurz.jpg">
           </section>
           <section data-background="images/360video.png">
             <h3 style="margin-top: 40%;">Consider 360 Video</h3>
           </section>
+          <section data-background="#ffffff">
+            <img alt="Jump" src="images/google-jump.jpg">
+          </section>
           <section>
             <h3>The ground is constantly changing</h3>
             <p>Beta software running on beta hardware.<br>
             Things break constantly.</p>
+          </section>
+          <section>
+            <h3>Let the User know what they are looking at</h3>
+            <p>Display a targeting HUD and other data.</p>
+          </section>
+          <section>
+            <h2>BUT...</h2>
           </section>
           <section>
             <h3>2D is Hard</h3>
@@ -583,7 +638,7 @@ if (Cardboard.SDK.CardboardTriggered &amp;&amp; isLookedAt) {
           </section>
           <section>
             <h2>EXERCISE</h2>
-            <h3>Score!</h3>
+            <h3>Lock on Target</h2>
           </section>
         </section>
         <section>
@@ -592,24 +647,16 @@ if (Cardboard.SDK.CardboardTriggered &amp;&amp; isLookedAt) {
           </section>
           <section data-background="images/i-know-kung-fu.png"></section>
           <section>
-            <h3>How do we move beyond Cardboard?</h3>
+            <h3>Where do we go from here?</h3>
           </section>
           <section>
-            <h3>Most Game Engines allow you to support multiple platforms</h3>
-            <p>In Unity simply attach the platform appropriate component.</p>
-          </section>
-          <section><h2>BUT...</h3></section>
-          <section>
-            <h3>As mentioned there is a wide range of available interactions.</h3>
-            <p>How do you shape an experience that supports them all?</p>
+            <h3>Complete the Game</h3>
+            <p>We've provided instrusctions on how to do this.<br />
+            Can also download the complete code at []</p>
           </section>
           <section>
-            <h3>Responsive VR</h3>
-            <p>With credit to <a href="http://smus.com/responsive-vr/">Boris Smus</a><br>
-            "Simple" devices get the roller coaster ride.<br>
-            Richer devices provide richer interactions.</p>
-          </section>
-          <section data-background-video="images/minecart.mp4,images/minecart.webm" data-background="#000000">
+            <h3>Explore other Unity Integrations</h3>
+            <p>Import packages for Oculus Mobile. Activate the appropriate behaviors manually, or programatically.</p>
           </section>
         </section>
         <section>
