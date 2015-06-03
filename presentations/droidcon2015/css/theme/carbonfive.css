@@ -291,3 +291,9 @@ section.has-light-background a {
 .reveal pre code {
   max-height: 100%;
   font-size: 32pt; }
+
+#hashtags {
+  margin-top: 5em;
+  font-size: 0.5em;
+  text-align: right;
+}
